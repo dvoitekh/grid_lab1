@@ -82,6 +82,14 @@ def rk4(tmin=Tmin, tmax=Tmax, n=N, q10=Q10, q20=Q20, i10=I10, i20=I20):
 
 def plot_results(vt, vq1, vq2, vi1, vi2, vur2):
     import matplotlib.pyplot as plt
+    import numpy as np
+
+    vt = np.array(vt).astype(float)
+    vq1 = np.array(vq1).astype(float)
+    vq2 = np.array(vq2).astype(float)
+    vi1 = np.array(vi1).astype(float)
+    vi2 = np.array(vi2).astype(float)
+    vur2 = np.array(vur2).astype(float)
 
     f1 = plt.figure(1)
     f1.suptitle('Q1')
